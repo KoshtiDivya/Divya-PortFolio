@@ -222,10 +222,6 @@ body {
   box-shadow: 0px 10px 10px #283b86 ;
   border: 2px solid aqua;
 }
-/* .project:hover{
-  border : 2px solid rgb(177, 177, 0);
-  width: 15.5rem;
-} */
 .project img{
   height: 8rem;
   object-fit: cover;
