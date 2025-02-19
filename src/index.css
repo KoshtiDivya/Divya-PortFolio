@@ -1,0 +1,335 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+   background-color: #22223B; 
+  color: white;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "poppins", Arial, Helvetica, sans-serif;
+  /* background: linear-gradient(#22223B,#00135d); */
+}
+body {
+  scroll-behavior: smooth;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+/* -------------------------------Navbar----------------------- */
+.navbar {
+  position: sticky !important;
+  top: 0;
+  z-index: 3;
+  width: 100vw;
+}
+.logo {
+  object-fit: cover;
+  width: 100px;
+  border : none;
+}
+.navbar a {
+  color: white;
+  text-decoration: none;
+  padding-bottom: 0.5rem;
+}
+.item-list a:hover {
+  border-bottom: 2px solid yellow !important;
+  color: yellow;
+}
+
+.item-list {
+  width: 30%;
+  justify-content: space-around;
+  margin-left: 2rem;
+  font-size: 1rem;
+  font-weight: 500;
+}
+.left .nav_title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-left: -1rem;
+  height: 50px;
+  display: inline-block;
+}
+.right {
+  justify-content: flex-end;
+}
+@media (max-width: 1024px) {
+  .item-list {
+    width: 40%;
+  }
+}
+.active{
+  color: yellow !important;
+  border-bottom: 2px solid yellow;
+}
+/* ---------------------------Hero section-------------------- */
+#intro {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1rem 2rem 1rem 2rem;
+  overflow: hidden;
+  position: relative;
+}
+.introContent {
+  width: 40%;
+  margin-left: -10%;
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+.hello{
+  font-size: 1.5rem;
+  font-weight: 100;
+
+}
+.introName{
+  color: yellow;
+}
+.introPara{
+  font-size: medium;
+  font-weight: 300;
+}
+#intro .profile-img img {
+  width: 350px;
+  border-radius: 50%;
+  border: 3px solid yellow;
+  object-fit: cover;
+  box-shadow: 8px 10px 10px #00135d ;
+  animation: home-animation 3s infinite;
+}
+@keyframes home-animation{
+  0%{
+     border-color: blue;
+     transform: translate(0,0px);
+     box-shadow: 10px 10px 100px 50px blue;
+  }
+  25%{
+    border-color: rgb(239,244,11);
+    box-shadow: 10px 10px 100px 50px rgb(239,244,11);
+  }
+  50%{
+    border-color: rgb(12,12,199);
+    transform: translate(0,10px);
+    box-shadow: 10px 10px 100px 50px rgb(12,12,199);
+  }
+  75%{
+    border-color: rgb(130,217,160) ;
+    box-shadow: 10px 10px 100px 50px rgb(130, 217, 160);
+  }
+  100%{
+    border-color: rgb(50,55,205);
+    transform: translate(0, -0px);
+    box-shadow: 10px 10px 100px 50px rgb(50, 55, 205) ;
+  }
+}
+.btn{
+  background-color: white  !important;
+  margin : 1rem 0;
+  padding : 0.75rem 2rem;
+  border :  none;
+  border-radius: 50%;
+}
+.btn:hover{
+  color: darkblue !important;
+  background-color: yellow !important;
+}
+@media screen and (max-width:765px){
+   .introContent{
+    padding-left : 0.75rem;
+    
+   }
+   #intro{
+    display: flex;
+    flex-direction: column;
+    height : auto;
+    margin-bottom: 2rem;
+    padding-bottom: 25%;
+   } 
+   .introContent{
+    width: 100%;
+    padding: 3rem;
+     }
+
+}
+
+/* -------------------Skills section------------------ */
+.skills-section{
+   padding-top : 2rem
+}
+.heading{
+  text-align: center;
+  font-size: 3rem;
+  font-weight:700;
+}
+.skills{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 3rem;
+  padding: 0 5rem;
+  justify-content: center;
+}
+.skill-data{
+  width: 150px;
+  height: 150px;
+  border-radius: 25%;
+  box-shadow: 0px 10px 10px #283b86 ;
+   background-color: #0b1129 ; 
+  align-items: center;
+  border: 2px solid aqua;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 2rem;
+}
+.skill-data img{
+  width: 60px;
+  margin-bottom: 1rem;
+  background-color:#0b1129  ;
+}
+.skill-data p{
+  background-color:#0b1129 ;
+}
+@media only screen and (max-width:460px){
+  .skill-data{
+    padding: 0;
+    margin: 2rem 0;
+  }
+} 
+/* ------------------------------- project section------------------------ */
+.desc{
+  font-size: medium;
+  font-weight: 100;
+  margin : 20px;
+  text-align: center;
+}
+.projects{
+  margin : 2rem;
+  padding: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.project{
+  width: 15rem;
+  height: 20rem;
+  background-color: #0b1129;
+  border : none;
+  border-radius: 15px;
+  margin: 20px;
+  padding: auto;
+  box-shadow: 0px 10px 10px #283b86 ;
+  border: 2px solid aqua;
+}
+/* .project:hover{
+  border : 2px solid rgb(177, 177, 0);
+  width: 15.5rem;
+} */
+.project img{
+  height: 8rem;
+  object-fit: cover;
+  width: 88%;
+  border-radius: 15px;
+  margin: 13px;
+  background-color: #0b1129;
+}
+.project p{
+  background-color: #0b1129;
+  font-weight: 300;
+  font-size: small;
+  margin: 10px;
+}
+.project a{
+  font-size: small;
+  width: 7rem;
+  margin-left: 27%;
+  padding: 5px;
+  border-radius: 10px;
+  color: white;
+  text-decoration: none;
+}
+.project a:hover{
+  color:yellow;
+  cursor: pointer;
+}
+/* ----------------------------------------contact page------------------------------------ */
+.contact{
+  min-height: (100vh - 3rem);
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+.contact-form{
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 90vw;
+  max-width: 60rem;
+  height: auto;
+  background-color: #22223B ;
+  /* background-color: #0b1129; */
+  border-radius: 25px;
+}
+.links img{
+  width : 30px;
+  margin: 20px;
+  /* background-color: #0b1129; */
+  background-color: #22223B;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0px 10px 10px #283b86;
+}
+.links img:hover{
+  border : 2px solid yellow;
+}
+.links a{
+  background-color: #22223B;
+}
+.name, .email, .message{
+  font-size: medium;
+  width : 70%;
+  max-width: 40rem;
+  margin : 1rem;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  background-color: #0b1129;
+}
+.submitBtn{
+  padding: 0.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: #0b1129 ;
+}
+.links{
+  background-color: #22223B;
+}
+@media  screen and (max-width:850px) {
+  .name, .email, .message{
+    width: 90%;;
+  }
+}
+@media screen and (max-width: 350px){
+  .contact-form{
+    height: 80vh;
+  }
+  .links img{
+    margin : 15px;
+  }
+}
+/* -----------------footer section ------------ */
+.footer{
+  width : 100vw;
+  height: 4rem;
+  background-color: #0b1129;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: small;
+  font-weight: 200;
+}
+
