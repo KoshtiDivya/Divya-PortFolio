@@ -12,7 +12,7 @@ const Skills = () => {
       <h1 className='heading'>My skills</h1>
       <div className='skills'>
         <div className="skill-data" data-aos="zoom-in-up" data-aos-duration="1000">
-          <img src={c} alt="c" />
+          <img src={c} alt="c"  />
           <p>C</p>
         </div>
         <div className="skill-data" data-aos="zoom-in-up" data-aos-duration="1000">

@@ -1,5 +1,5 @@
 import React from "react";
-import my_logo from "../../public/assets/profile-logos/divya_logo.png";
+import my_logo from "../assets/D_logo.png";
 import { Link } from "react-scroll";
 const Navbar = () => {
   return (
