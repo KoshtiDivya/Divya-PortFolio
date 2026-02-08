@@ -1,6 +1,6 @@
 import React from "react";
 import profile from "../assets/divya profile.jpg";
-import resume from '../resume/Divya_Resume.pdf';
+import resume from '../resume/Divya_Koshti_Resume.pdf';
 const Home = () => {
   return (
     <section id="intro">
