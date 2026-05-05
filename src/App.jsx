@@ -8,19 +8,33 @@ import Footer from "./components/Footer";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
+import { Route, Routes } from "react-router-dom";
+import ProjectDetails from "./components/ProjectDetails";
 function App() {
   useEffect(() => {
     Aos.init();
    },[])
   return (
     <>
-      <Navbar />
-      <Home />
-      <Skills />
-      <Projects />
-      <Contact />
-      <Footer/>
-    </>
+
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <>
+              <Navbar />
+              <Home />
+              <Skills />
+              <Projects />
+              <Contact />
+              <Footer />
+            </>
+          }
+        />
+
+        <Route path="/project/:id" element={<ProjectDetails />} />
+      </Routes>
+      </>
   )
 }
 

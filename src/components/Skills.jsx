@@ -4,45 +4,53 @@ import html from '../images/html-logo.png';
 import java from '../images/java-logo.png';
 import css from '../images/css-logo.png';
 import bootstrap from '../images/bootstap-logo.png';
+import tailwind from '../images/tailwind.png';
 import javascript from '../images/js-logo.png';
 import react from '../images/react-logo.png';
+import node from "../images/node-js.png";
+import express from "../images/express.png";
+import mongodb from "../images/mongodb.png";
+
+const skills = [
+  { name: "C", img: c },
+  { name: "Java", img: java },
+  { name: "HTML", img: html },
+  { name: "CSS", img: css },
+  { name: "Bootstrap", img: bootstrap },
+  { name: "Tailwind", img: tailwind },
+  { name: "JavaScript", img: javascript },
+
+  { name: "React", img: react },
+  { name: "Node.js", img: node },
+  { name: "Express.js", img: express },
+  { name: "MongoDB", img: mongodb },
+];
+
 const Skills = () => {
   return (
-    <section id='skills-section' >
-      <h1 className='heading'>My skills</h1>
+    <section id='skills-section'>
+      <h1 className='heading'>Technical Skills</h1>
+
+      <p className="subheading">
+        Frontend & MERN Stack Technologies I Work With
+      </p>
+
       <div className='skills'>
-        <div className="skill-data" data-aos="zoom-in-up" data-aos-duration="1000">
-          <img src={c} alt="c"  />
-          <p>C</p>
-        </div>
-        <div className="skill-data" data-aos="zoom-in-up" data-aos-duration="1000">
-          <img src={java} alt="java" />
-          <p>Java</p>
-        </div>
-        <div className="skill-data" data-aos="zoom-in-up" data-aos-duration="1000">
-          <img src={react} alt="React" />
-          <p>React</p>
-        </div>
-        <div className="skill-data" data-aos="zoom-in-up" data-aos-duration="1000">
-          <img src={html} alt="html" />
-          <p>HTML</p> 
-        </div>
-        <div className="skill-data" data-aos="zoom-in-up" data-aos-duration="1000">
-          <img src={css} alt="CSS" />
-          <p>CSS</p>
-        </div>
-        <div className="skill-data" data-aos="zoom-in-up" data-aos-duration="1000">
-          <img src={bootstrap} alt="Bootstrap" />
-          <p>Bootstrap</p>
-        </div>
-        <div className="skill-data" data-aos="zoom-in-up" data-aos-duration="1000">
-          <img src={javascript} alt="Javascript" />
-          <p>JavaScript</p>
-        </div>
-        
+        {skills.map((skill, index) => (
+          <div
+            key={index}
+            className="skill-data"
+            data-aos="zoom-in-up"
+            data-aos-duration="1000"
+          >
+            <img src={skill.img} alt={skill.name} />
+            <p>{skill.name}</p>
+          </div>
+        ))}
       </div>
     </section>
+
   )
 }
 
-export default Skills
+  export default Skills;

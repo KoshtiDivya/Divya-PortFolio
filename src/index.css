@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 * {
-   background-color: #22223B; 
+  background-color: #22223B; 
   color: white;
   margin: 0px;
   padding: 0px;
@@ -19,11 +19,16 @@ body {
   position: sticky !important;
   top: 0;
   z-index: 3;
-  width: 100vw;
+  width: 100%;
+  height: 10vh
 }
-.logo {
+.navbar .left{
+  width: 20%;
+  height: 100%;
+}
+.navbar img {
   object-fit: cover;
-  width: 100px;
+  width: 30%;
   border : none;
 }
 .navbar a {
@@ -64,7 +69,7 @@ body {
 }
 /* ---------------------------Hero section-------------------- */
 #intro {
-  height: 100vh;
+  height: 85vh;
   width: 100vw;
   display: flex;
   justify-content: space-around;
@@ -144,14 +149,17 @@ body {
     display: flex;
     flex-direction: column;
     height : auto;
+    width: 100%;
     margin-bottom: 2rem;
     padding-bottom: 25%;
    } 
    .introContent{
     width: 100%;
-    padding: 3rem;
-     }
-
+    margin: 10px auto;
+    }
+    .role{
+      font-size: 18px;
+    }
 }
 
 /* -------------------Skills section------------------ */
@@ -162,6 +170,7 @@ body {
   text-align: center;
   font-size: 3rem;
   font-weight:700;
+  padding: 10px 20px;
 }
 .skills{
   display: flex;
@@ -171,30 +180,54 @@ body {
   justify-content: center;
 }
 .skill-data{
-  width: 150px;
-  height: 150px;
-  border-radius: 25%;
-  box-shadow: 0px 10px 10px #283b86 ;
-   background-color: #0b1129 ; 
-  align-items: center;
+  width: 140px;
+  height: 140px;
+  border-radius: 20px;
   border: 2px solid aqua;
+  margin: 10px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 2rem;
+  align-items: center;
+  flex-wrap: wrap;
+  transition: 0.3s;
+
+}
+.subheading{
+  text-align: center;
+  margin-top: 10px;
+  font-size: medium;
+  font-weight: 100;
 }
 .skill-data img{
-  width: 60px;
-  margin-bottom: 1rem;
-  background-color:#0b1129  ;
+  width: 70px;
+  height: 70px;
+  object-fit: contain; 
+  margin-bottom: 10px;
+  border: none;
 }
-.skill-data p{
-  background-color:#0b1129 ;
+.skill-data:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 0 20px aqua;
 }
+
 @media only screen and (max-width:460px){
   .skill-data{
-    padding: 0;
-    margin: 2rem 0;
+    width: 45%;  
+    margin: 1rem 0;
+  }
+  .subheading{
+    margin: 0px 20px;
+    font-size: 1rem;
+  }
+  .skills{
+    justify-content: space-between;
+    padding: 0 1rem;
+    width: 100%;
+    margin: 0;
+  }
+  .heading{
+    font-size: 2rem;
   }
 } 
 /* ------------------------------- project section------------------------ */
@@ -222,6 +255,10 @@ body {
   box-shadow: 0px 10px 10px #283b86 ;
   border: 2px solid aqua;
 }
+.project:hover{
+  cursor: pointer;
+  box-shadow: 0 0 20px aqua;
+}
 .project img{
   height: 8rem;
   object-fit: cover;
@@ -248,6 +285,31 @@ body {
 .project a:hover{
   color:yellow;
   cursor: pointer;
+}
+.project-details {
+  display: flex;
+  padding: 50px;
+  gap: 40px;
+  color: white;
+}
+
+.left-section img {
+  width: 400px;
+  border-radius: 20px;
+}
+
+.right-section {
+  max-width: 500px;
+}
+
+.right-section a {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: aqua;
+  color: black;
+  border-radius: 10px;
+  text-decoration: none;
 }
 /* ----------------------------------------contact page------------------------------------ */
 .contact{
