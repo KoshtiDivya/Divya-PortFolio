@@ -13,9 +13,11 @@ const Projects = () => {
           <div
             key={project.id}
             className="project"
+            data-aos="zoom-out-up"
+            data-aos-duration="1000"
             onClick={() => navigate(`/project/${project.id}`)}
           >
-            <img src={project.image} alt={project.title} />
+            <img src={project.image[0]} alt={project.title} />
             <p>{project.desc}</p>
           </div>
         ))}

@@ -8,9 +8,7 @@ const Navbar = () => {
 
         <div className="container-fluid ">
           <div className="left navbar-header " data-aos="fade-right">
-            <a href="">
               <img src={my_logo} alt="Divya" className="logo"/>
-            </a>
             <a href="" className="nav_title">
               PortFolio
             </a>
@@ -31,7 +29,7 @@ const Navbar = () => {
             className="collapse navbar-collapse right"
             id="navbarNavAltMarkup"
           >
-            <div className="navbar-nav item-list" data-aos="fade-left">
+            <div className="navbar-nav item-list">
               <Link activeClass='active' to='intro'spy={true} offset={-100} duration={500} className=" nav-item" aria-current="page" href="#">
                 Home
               </Link>
