@@ -321,6 +321,9 @@ body {
   border: 1px solid aqua;
   border-radius: 10px;
 }
+.project-title{
+  color: aqua;
+}
 .left-section{
   height: 80vh;
   width: 40%;

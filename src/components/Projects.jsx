@@ -17,8 +17,10 @@ const Projects = () => {
             data-aos-duration="1000"
             onClick={() => navigate(`/project/${project.id}`)}
           >
+            
             <img src={project.image[0]} alt={project.title} />
-            <p>{project.desc}</p>
+            <p className="project-title">{ project.title}</p>
+            <p>{project.desc[0]}</p>
           </div>
         ))}
       </div>

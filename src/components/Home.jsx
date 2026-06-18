@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import profile from "../assets/divya profile.jpg";
 import resume from '../resume/Divya_Koshti_Resume.pdf';
-const role = ['“Frontend Developer”', '“Full Stack (MERN) Developer”'];
+const role = ['“Frontend Developer”', '“Full Stack (MERN) Developer”', '"React Developer"'];
 
 const Home = () => {
   const [text, setText] = useState("");
