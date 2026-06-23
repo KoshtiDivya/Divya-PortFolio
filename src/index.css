@@ -460,10 +460,10 @@ li::marker{
   display: flex;
   align-items: center;
   flex-direction: column;
-  margin-bottom: 1rem;
+  margin: 1.2rem 0 0.75rem 0;
 }
 .contact-form{
-  margin: 1rem;
+  margin: 0.65rem;
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -490,6 +490,10 @@ li::marker{
 .contact-form input:focus, textarea:focus {
   border-color: aqua;
   box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+}
+.msg-send{
+  background-color: #18181b;
+  color: rgb(47, 250, 47);
 }
 .links {
   display: flex;

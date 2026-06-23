@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import profile from "../assets/divya profile.png";
-import resume from '../resume/Divya_Koshti_Resume.pdf';
+import resume from "../resume/Divya_koshti_Resume.pdf"
 const role = ['“Frontend Developer”', '“Full Stack (MERN) Developer”', '"React Developer"'];
 
 const Home = () => {
