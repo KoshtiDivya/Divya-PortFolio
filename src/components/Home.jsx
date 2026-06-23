@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import profile from "../assets/divya profile.png";
-import resume from "../resume/Divya_koshti_Resume.pdf"
 const role = ['“Frontend Developer”', '“Full Stack (MERN) Developer”', '"React Developer"'];
 
 const Home = () => {
@@ -38,7 +37,7 @@ const Home = () => {
         </span>
         <p className="introPara">I build modern, responsive, and user-friendly web applications using React, Node.js, and MongoDB.  With a strong foundation in frontend development and growing backend expertise, I enjoy turning ideas into real-world applications.</p>
         <p className="introPara">Currently open to internships and freelance opportunities.</p>
-       <a href={resume}><button className="btn"><i className="fa-solid fa-download" />Download Resume</button></a>
+        <a href="public\Divya_Koshti_Resume.pdf" download><button className="btn"><i className="fa-solid fa-download" />Download Resume</button></a>
       </div>
       <div className="profile-img" data-aos="fade-up-left" data-aos-duration="1000">
           <img src={profile} alt="profile"/>
