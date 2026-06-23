@@ -1,8 +1,39 @@
-# React + Vite
+# 🌐 Personal Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern and responsive portfolio website built using React.js to showcase my skills, projects, and achievements as a Frontend Web Developer.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Responsive design for all devices
+- About Me section
+- Skills showcase
+- Project portfolio
+- Contact section
+- Smooth and user-friendly interface
+
+## 🛠️ Technologies Used
+
+- React.js
+- JavaScript
+- HTML5
+- CSS3
+
+
+## 📂 Projects Included
+
+- Doctor Appointment Application
+- Real time ChatApp
+- Expense Tracker Website
+- Recipe Finder App
+- JioCinema Clone
+- Amazon Clone
+- Tic-Tac-Toe Game
+
+
+## 💻 Installation
+
+```bash
+git clone https://github.com/KoshtiDivya/Divya-PortFolio.git
+cd portfolio
+npm install
+npm run dev
