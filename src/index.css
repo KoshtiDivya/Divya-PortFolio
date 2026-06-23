@@ -1,12 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import "tailwindcss";
 * {
-  background-color: #22223B; 
+  background-color: #0C0C0F; 
   color: white;
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
   font-family: "poppins", Arial, Helvetica, sans-serif;
-  /* background: linear-gradient(#22223B,#00135d); */
 }
 body {
   scroll-behavior: smooth;
@@ -23,7 +23,7 @@ body {
   height: 10vh
 }
 .navbar .left{
-  width: 10%;
+  width: 15%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -31,17 +31,15 @@ body {
 }
 .navbar img {
   object-fit: cover;
-  width: 60%;
+  width: 40%;
 }
 .navbar a {
   color: white;
   text-decoration: none;
   padding-bottom: 0.5rem;
+  transition: all 0.3s linear;
 }
-.item-list a:hover {
-  border-bottom: 2px solid aqua !important;
-  color: aqua;
-}
+
 
 .item-list {
   width: 30%;
@@ -61,6 +59,12 @@ body {
 .right {
   justify-content: flex-end;
 }
+ .item-list a:hover {
+  border-bottom: 2px solid aqua !important;
+  color: aqua;
+  transform: scale(1.02);
+  }
+
 @media (max-width: 768px) {
   .navbar .left{
     width: 30%;
@@ -71,11 +75,15 @@ body {
   .left .nav_title{
     padding-top: 10%;
   }
+  .navbar img {
+    width: 70%;
+   }
 }
-@media (max-width: 1024px) {
+@media (max-width: 1024px){
   .item-list {
     width: 40%;
   }
+ 
 }
 .active{
   color: aqua !important;
@@ -110,38 +118,45 @@ body {
   font-size: medium;
   font-weight: 300;
 }
-#intro .profile-img img {
-  width: 350px;
-  border-radius: 50%;
-  border: 3px solid yellow;
-  object-fit: cover;
-  box-shadow: 8px 10px 10px #00135d ;
-  animation: home-animation 3s infinite;
+.profile-img{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.profile-img::before, 
+.profile-img::after{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: conic-gradient(
+    transparent,
+    transparent,
+    transparent,
+    aqua
+  );
+  animation: home-animation 4s linear infinite;
+}
+.profile-img::after{
+  animation-delay: 2s;
+}
+.profile-img img{
+    height: calc(100% - 10px);
+    width: calc(100% - 10px);
+    border-radius: 50%;
+    object-fit: cover;
+    z-index: 2;
 }
 @keyframes home-animation{
-  0%{
-     border-color: blue;
-     transform: translate(0,0px);
-     box-shadow: 10px 10px 100px 50px blue;
-  }
-  25%{
-    border-color: rgb(239,244,11);
-    box-shadow: 10px 10px 100px 50px rgb(239,244,11);
-  }
-  50%{
-    border-color: rgb(12,12,199);
-    transform: translate(0,10px);
-    box-shadow: 10px 10px 100px 50px rgb(12,12,199);
-  }
-  75%{
-    border-color: rgb(130,217,160) ;
-    box-shadow: 10px 10px 100px 50px rgb(130, 217, 160);
-  }
-  100%{
-    border-color: rgb(50,55,205);
-    transform: translate(0, -0px);
-    box-shadow: 10px 10px 100px 50px rgb(50, 55, 205) ;
-  }
+    from {
+      transform: rotate(0deg);
+    }to{
+      transform: rotate(360deg);
+    }
 }
 .btn{
   margin : 1rem 0;
@@ -152,7 +167,7 @@ body {
   color: black;
   font-weight: 600;
   cursor: pointer;
-  transition: 0.3s;
+  transition: all 0.2s linear;
 }
 .btn i{
   color: black;
@@ -160,7 +175,7 @@ body {
   background-color: aqua;
 }
 .btn:hover {
-  transform: scale(1.05);
+  transform: scale(1.04);
   box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
 }
 @media screen and (max-width:765px){
@@ -170,7 +185,7 @@ body {
    }
    #intro{
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     height : auto;
     width: 100%;
     margin-bottom: 2rem;
@@ -213,8 +228,7 @@ body {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  transition: 0.3s;
-
+  transition: all 0.3s ease;
 }
 .subheading{
   text-align: center;
@@ -230,10 +244,8 @@ body {
   border: none;
 }
 .skill-data:hover {
-  transform: translateY(-10px) scale(1.05);
   box-shadow: 0 0 20px aqua;
 }
-
 @media only screen and (max-width:460px){
   .skill-data{
     width: 45%;  
@@ -261,7 +273,7 @@ body {
   text-align: center;
 }
 .projects{
-  margin : 2rem;
+  margin : 2rem 4rem;
   padding: auto;
   display: flex;
   flex-wrap: wrap;
@@ -277,18 +289,30 @@ body {
   padding: auto;
   box-shadow: 0px 10px 10px #283b86 ;
   border: 2px solid aqua;
+  transition: all 2s linear;
 }
 .project:hover, .left-section img:hover{
   cursor: pointer;
   box-shadow: 0 0 20px aqua;
 }
-.project img{
-  height: 8rem;
+.project:hover img{
+        transition: all 0.5s linear;
+        transform: scale(1.1);       
+}
+.project-img img{
+  height: 100%;
   object-fit: cover;
-  width: 88%;
+  width: 100%;
   border-radius: 15px;
-  margin: 13px;
-  background-color: #0b1129;
+}
+.project-img{
+      margin: auto;
+      width: 90%;
+      height: 10rem;
+      border-radius: 15px;
+      background-color: #0B1129;
+      overflow: hidden;
+      margin-top: 1rem ; 
 }
 .project p{
   background-color: #0b1129;
@@ -315,6 +339,21 @@ body {
   padding: 20px;
   gap: 10px;
   color: white;
+}
+.view-more-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.view-more-btn{
+  padding: 0.45rem 1rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  border: 1px solid aqua;
+}
+.view-more-btn:hover{
+  color: aqua;
+   transform: scale(1.05);
 }
 .project-data{
   display: flex;
@@ -384,6 +423,7 @@ li::marker{
   margin: 10px 0;
   text-decoration: none;
 }
+
 @media only screen and (max-width:768px) {
   .project-details{
     flex-direction: column;
@@ -391,6 +431,13 @@ li::marker{
     height: max-content;
     margin-top: 20px;
     padding: 0;
+  }
+  .projects{
+    padding: 0;
+    margin: 0;
+  }
+  .project{
+    height: 25rem;
   }
   .project-heading{
     padding-right: 10px;
@@ -475,7 +522,7 @@ li::marker{
   margin : 1rem;
   padding: 0.5rem;
   border-radius: 0.5rem;
-  background-color: #0b1129;
+  background-color: #0C0F1C;
 }
 .submitBtn{
   padding: 10px 40px;
@@ -484,6 +531,7 @@ li::marker{
   border-radius: 0.5rem;
   background-color: aqua ;
   margin-bottom: 20px;
+  transition: all 0.3s linear;
 }
 .submitBtn:hover {
   transform: scale(1.05);
@@ -507,7 +555,7 @@ li::marker{
 .footer{
   width : 100vw;
   height: 4rem;
-  background-color: #0b1129;
+  background-color: #0C0F1C;
   display: flex;
   justify-content: center;
   align-items: center;

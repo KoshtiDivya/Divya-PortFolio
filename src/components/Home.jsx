@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import profile from "../assets/divya profile.jpg";
+import profile from "../assets/divya profile.png";
 import resume from '../resume/Divya_Koshti_Resume.pdf';
 const role = ['“Frontend Developer”', '“Full Stack (MERN) Developer”', '"React Developer"'];
 
@@ -41,7 +41,7 @@ const Home = () => {
        <a href={resume}><button className="btn"><i className="fa-solid fa-download" />Download Resume</button></a>
       </div>
       <div className="profile-img" data-aos="fade-up-left" data-aos-duration="1000">
-      <img src={profile} alt="profile"/>
+          <img src={profile} alt="profile"/>
       </div>
      
     </section>
