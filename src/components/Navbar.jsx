@@ -8,8 +8,8 @@ const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
   return (
     <>
-      <nav className="fixed navbar w-full z-50 bg-dark-100/90 backdrop-blur-sm py-1 px-8 shadow-lg">
-        <div className="container-fluid mx-auto flex justify-between items-center">
+      <nav className="fixed navbar w-full z-50 bg-dark-100/90 py-1 shadow-lg">
+        <div className="container-fluid mx-auto flex justify-between items-center bg-[#050814]">
           <div className="left navbar-header" data-aos="">
               <img src={my_logo} alt="Divya" className="logo"/>
               <a href="" className="nav_title">
@@ -17,16 +17,43 @@ const Navbar = () => {
               </a>
           </div>
 
-          <div className="hidden md:flex space-x-10 item-list">
+          <div className="hidden md:flex space-x-10 item-list md:w-[40%]! sm:w-[60%]!">
               <Link activeClass='active' to='intro'spy={true} offset={-100} duration={500} className=" nav-item " aria-current="page" href="#">
                 Home
               </Link>
-              <Link activeClass='active' to='skills-section'spy={true} offset={-80} duration={500} className="nav-item" href="#">
-                Skills
-              </Link>
-              <Link activeClass='active' to='project-section'spy={true} offset={-100} duration={500} className=" nav-item" href="#">
-                Projects
-              </Link>
+              <Link
+  activeClass="active"
+  to="skills-section"
+  spy={true}
+  isDynamic={true}
+  offset={-100}
+  duration={500}
+  className="nav-item"
+>
+  Skills
+</Link>
+           <Link
+  activeClass="active"
+  to="experience-section"
+  spy={true}
+  offset={-100}
+  duration={500}
+  className="nav-item"
+>
+  Experience
+</Link>
+
+<Link
+  activeClass="active"
+  to="project-section"
+  spy={true}
+  isDynamic={true}
+  offset={-100}
+  duration={500}
+  className="nav-item"
+>
+  Projects
+</Link>
               <Link activeClass='active' to='contact'spy={true} offset={-100} duration={500} className=" nav-item" href="">
                 Contact Me
               </Link>
@@ -44,17 +71,20 @@ const Navbar = () => {
         {/* Mobile Menu */}
         {
           showMenu && (
-            <div className="md:hidden mt-0 bg-dark-300 w-full h-screen rounded-lg p-4 flex flex-col sp  ">
-              <Link onClick={() => setShowMenu(!showMenu)} activeClass='active' to='intro'spy={true} offset={-100} duration={500} className=" nav-item pt-2" aria-current="page" href="#">
+            <div className="md:hidden mt-0 bg-[#050814] w-full h-screen rounded-lg px-4 flex flex-col gap-4">
+              <Link onClick={() => setShowMenu(!showMenu)} activeClass='active' to='intro'spy={true} offset={-100} duration={500} className=" nav-item pt-2 mx-5!" aria-current="page" href="#">
                 Home
               </Link>
-              <Link onClick={() => setShowMenu(!showMenu)} activeClass='active' to='skills-section'spy={true} offset={-80} duration={500} className="nav-item pt-2" href="#">
+              <Link onClick={() => setShowMenu(!showMenu)} activeClass='active' to='skills-section'spy={true} offset={-100} duration={500} className="nav-item pt-2 mx-5!" href="#">
                 Skills
               </Link>
-              <Link onClick={() => setShowMenu(!showMenu)} activeClass='active' to='project-section'spy={true} offset={-100} duration={500} className=" nav-item pt-2" href="#">
+               <Link onClick={() => setShowMenu(!showMenu)} activeClass='active' to='experience-section'spy={true} offset={-100} duration={500} className="nav-item pt-2 mx-5!" href="#">
+                Experiance
+              </Link>
+              <Link onClick={() => setShowMenu(!showMenu)} activeClass='active' to='project-section'spy={true} offset={-100} duration={500} className=" nav-item pt-2 mx-5!" href="#">
                 Projects
               </Link>
-              <Link onClick={() => setShowMenu(!showMenu)} activeClass='active' to='contact'spy={true} offset={-100} duration={500} className=" nav-item pt-2" href="">
+              <Link onClick={() => setShowMenu(!showMenu)} activeClass='active' to='contact'spy={true} offset={-100} duration={500} className=" nav-item pt-2 mx-5!" href="#">
                 Contact Me
               </Link>
             </div>

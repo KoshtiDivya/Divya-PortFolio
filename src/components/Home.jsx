@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
 import profile from "../assets/divya profile.png";
+import { FaDownload } from "react-icons/fa";
+
 const role = [
-  "“Frontend Developer”",
-  "“Full Stack (MERN) Developer”",
-  '"React Developer"',
+  "Frontend Developer",
+  "Full Stack (MERN) Developer",
+  "React Developer",
 ];
 
 const Home = () => {
@@ -18,56 +20,60 @@ const Home = () => {
         if (!isDeleting) {
           setText(current.substring(0, text.length + 1));
 
-          if (text == current) {
-            setTimeout(() => setIsDeleting(true), 1000);
+          if (text === current) {
+            setTimeout(() => setIsDeleting(true), 1500);
           }
         } else {
           setText(current.substring(0, text.length - 1));
-          if (text == "") {
+          if (text === "") {
             setIsDeleting(false);
             setIndex((prev) => (prev + 1) % role.length);
           }
         }
       },
-      isDeleting ? 50 : 100,
+      isDeleting ? 40 : 80
     );
     return () => clearTimeout(timeout);
   }, [text, isDeleting, index]);
+
   return (
     <section id="intro">
       <div
         className="introContent"
-        data-aos="fade-up-right"
+        data-aos="fade-right"
         data-aos-duration="1000"
       >
-        <span className="hello">Hello, </span> <br />
-        <span>
-          I'm <span className="introName">Divya</span> <br />
+        <span className="hello">Hello & Welcome 👋</span>
+        <h1 className="introName">
+          I'm <span className="gradient-text">Divya</span>
+        </h1>
+        <div className="role-container">
           <span className="role">{text}</span>
-          <span className="role">|</span>
-        </span>
+          <span className="cursor-blink">|</span>
+        </div>
         <p className="introPara">
           I build modern, responsive, and user-friendly web applications using
           React, Node.js, and MongoDB. With a strong foundation in frontend
           development and growing backend expertise, I enjoy turning ideas into
-          real-world applications.
+          real-world scalable applications.
         </p>
-        <p className="introPara">
-          Currently open to internships and freelance opportunities.
+        <p className="introPara text-cyan-400/80 font-medium">
+          ✨ Currently open to full-time roles, internships & freelance projects.
         </p>
-        <a href="/Divya_Koshti_Resume.pdf" download>
-          <button className="btn">
-            <i className="fa-solid fa-download"></i>
-            Download Resume
-          </button>
+        <a href="/Divya_Koshti_Resume.pdf" download className="btn-primary">
+          <FaDownload />
+          Download Resume
         </a>
       </div>
+
       <div
-        className="profile-img"
-        data-aos="fade-up-left"
+        className="profile-container"
+        data-aos="fade-left"
         data-aos-duration="1000"
       >
-        <img src={profile} alt="profile" />
+        <div className="profile-img">
+          <img src={profile} alt="Divya Koshti Profile" />
+        </div>
       </div>
     </section>
   );
