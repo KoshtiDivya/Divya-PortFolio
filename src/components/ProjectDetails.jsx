@@ -1,5 +1,5 @@
-import React from "react";
 import { useNavigate, useParams } from "react-router-dom";
+import { FiArrowLeft } from "react-icons/fi";
 import projectData from "../assets/projectData";
 
 const ProjectDetails = () => {
@@ -8,28 +8,32 @@ const ProjectDetails = () => {
 
   const project = projectData.find((p) => p.id === parseInt(id));
 
-  if (!project) return <h2 style={{ padding: "40px", textAlign: "center", color: "#00ffff" }}>Project not found</h2>;
+  if (!project) return <h2 style={{ padding: "40px", textAlign: "center", color: "var(--accent-cyan)" }}>Project not found</h2>;
 
   return (
     <div className="project-details">
       <div className="project-heading">
         <h1>{project.title}</h1>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="45"
-          height="45"
-          fill="#00ffff"
-          viewBox="0 0 256 256"
+        <button
+          type="button"
+          className="back-btn"
           onClick={() => navigate("/")}
+          aria-label="Back to portfolio"
         >
-          <path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm48-88a8,8,0,0,1-8,8H107.31l18.35,18.34a8,8,0,0,1-11.32,11.32l-32-32a8,8,0,0,1,0-11.32l32-32a8,8,0,0,1,11.32,11.32L107.31,120H168A8,8,0,0,1,176,128Z"></path>
-        </svg>
+          <FiArrowLeft aria-hidden="true" />
+        </button>
       </div>
 
       <div className="project-data">
         <div className="left-section">
           {project.image.slice(0, 2).map((img, index) => (
-            <img key={index} src={img} alt={project.title} />
+            <img
+              key={index}
+              src={img}
+              alt={`${project.title} screenshot ${index + 1}`}
+              loading="lazy"
+              decoding="async"
+            />
           ))}
         </div>
 

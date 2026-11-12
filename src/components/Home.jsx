@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from "react";
-import profile from "../assets/divya profile.png";
-import { FaDownload } from "react-icons/fa";
+import { useEffect, useState } from "react";
+import profile from "../images/optimized/divya profile.jpg";
+import { FaArrowRight, FaDownload } from "react-icons/fa";
+import { Link } from "react-scroll";
 
 const role = [
   "Frontend Developer",
@@ -17,21 +18,18 @@ const Home = () => {
     const current = role[index];
     const timeout = setTimeout(
       () => {
-        if (!isDeleting) {
-          setText(current.substring(0, text.length + 1));
-
-          if (text === current) {
-            setTimeout(() => setIsDeleting(true), 1500);
-          }
-        } else {
+        if (isDeleting && text.length === 0) {
+          setIsDeleting(false);
+          setIndex((prev) => (prev + 1) % role.length);
+        } else if (isDeleting) {
           setText(current.substring(0, text.length - 1));
-          if (text === "") {
-            setIsDeleting(false);
-            setIndex((prev) => (prev + 1) % role.length);
-          }
+        } else if (text === current) {
+          setIsDeleting(true);
+        } else {
+          setText(current.substring(0, text.length + 1));
         }
       },
-      isDeleting ? 40 : 80
+      isDeleting ? 40 : text === current ? 1500 : 80
     );
     return () => clearTimeout(timeout);
   }, [text, isDeleting, index]);
@@ -43,27 +41,37 @@ const Home = () => {
         data-aos="fade-right"
         data-aos-duration="1000"
       >
-        <span className="hello">Hello & Welcome 👋</span>
+        <span className="availability-pill">
+          <span className="availability-dot" />
+          Open to opportunities
+        </span>
+        <p className="hello">Hello, I’m</p>
         <h1 className="introName">
-          I'm <span className="gradient-text">Divya</span>
+          Divya Koshti<span className="intro-period">.</span>
         </h1>
         <div className="role-container">
           <span className="role">{text}</span>
           <span className="cursor-blink">|</span>
         </div>
         <p className="introPara">
-          I build modern, responsive, and user-friendly web applications using
-          React, Node.js, and MongoDB. With a strong foundation in frontend
-          development and growing backend expertise, I enjoy turning ideas into
-          real-world scalable applications.
+          I create modern, responsive web experiences with React, Node.js, and
+          MongoDB—turning thoughtful ideas into useful, polished products.
         </p>
-        <p className="introPara text-cyan-400/80 font-medium">
-          ✨ Currently open to full-time roles, internships & freelance projects.
-        </p>
-        <a href="/Divya_Koshti_Resume.pdf" download className="btn-primary">
-          <FaDownload />
-          Download Resume
-        </a>
+        <div className="hero-actions">
+          <a href="/Divya_Koshti_Resume.pdf" download className="btn-primary">
+            <FaDownload aria-hidden="true" />
+            Download Resume
+          </a>
+          <Link
+            to="project-section"
+            smooth={true}
+            offset={-100}
+            duration={500}
+            className="hero-link"
+          >
+            Explore my work <FaArrowRight aria-hidden="true" />
+          </Link>
+        </div>
       </div>
 
       <div
@@ -72,7 +80,11 @@ const Home = () => {
         data-aos-duration="1000"
       >
         <div className="profile-img">
-          <img src={profile} alt="Divya Koshti Profile" />
+          <img
+            src={profile}
+            alt="Divya Koshti Profile"
+            decoding="async"
+          />
         </div>
       </div>
     </section>
