@@ -1,10 +1,9 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import projectData from "../assets/projectData";
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { FaExternalLinkAlt } from "react-icons/fa";
 
 const Projects = () => {
-  const navigate = useNavigate();
   const [showAll, setShowAll] = useState(false);
 
   const displayedProjects = showAll
@@ -22,23 +21,28 @@ const Projects = () => {
 
       <div className="projects-grid">
         {displayedProjects.map((project, index) => (
-          <div
+          <Link
             key={project.id}
+            to={`/project/${project.id}`}
             className="project-card"
             data-aos="fade-up"
             data-aos-duration="600"
             data-aos-delay={index * 100}
-            onClick={() => navigate(`/project/${project.id}`)}
           >
             <div className="project-img-wrapper">
-              <img src={project.image[0]} alt={project.title} />
+              <img
+                src={project.image[0]}
+                alt={project.title}
+                loading="lazy"
+                decoding="async"
+              />
             </div>
 
             <div className="project-content">
               <div>
                 <div className="flex justify-between items-start gap-2 mb-2">
                   <h3 className="project-card-title">{project.title}</h3>
-                  <FaExternalLinkAlt className="text-cyan-400 text-xs shrink-0 mt-1" />
+                  <FaExternalLinkAlt className="project-link-icon text-xs shrink-0 mt-1" />
                 </div>
                 <p className="project-card-desc">{project.desc[0]}</p>
               </div>
@@ -52,7 +56,7 @@ const Projects = () => {
                   ))}
               </div>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
 

@@ -1,4 +1,3 @@
-import React from "react";
 import c from "../images/c-logo.png";
 import html from "../images/html-logo.png";
 import java from "../images/java-logo.png";

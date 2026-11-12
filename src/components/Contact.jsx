@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import { useRef, useState } from "react";
 import github from "../images/github.png";
 import facebook from "../images/facebook.png";
 import instagram from "../images/instagram.png";
@@ -9,30 +9,32 @@ import { FaPaperPlane } from "react-icons/fa";
 const Contact = () => {
   const [send, setSend] = useState(false);
   const [loading, setLoading] = useState(false);
-  const form = useRef();
+  const [sendError, setSendError] = useState("");
+  const form = useRef(null);
 
-  const sendEmail = (e) => {
+  const sendEmail = async (e) => {
     e.preventDefault();
     setLoading(true);
-    emailjs
-      .sendForm(
+    setSendError("");
+
+    try {
+      await emailjs.sendForm(
         "service_r6d0co2",
         "template_o8p1nat",
         form.current,
         "tbsl8ZVurYGz9TTV_"
-      )
-      .then(
-        () => {
-          e.target.reset();
-          setSend(true);
-          setLoading(false);
-          setTimeout(() => setSend(false), 5000);
-        },
-        (error) => {
-          console.log("FAILED...", error.text);
-          setLoading(false);
-        }
       );
+      form.current.reset();
+      setSend(true);
+      setTimeout(() => setSend(false), 5000);
+    } catch (error) {
+      console.error("Failed to send contact message", error);
+      setSendError(
+        "We couldn't send your message. Please try again later."
+      );
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -47,7 +49,9 @@ const Contact = () => {
       <div className="contact-card" data-aos="fade-up" data-aos-duration="800">
         <form ref={form} onSubmit={sendEmail} className="contact-form">
           <div className="form-group">
+            <label htmlFor="contact-name">Your Name</label>
             <input
+              id="contact-name"
               type="text"
               name="your_name"
               placeholder="Your Name"
@@ -56,7 +60,9 @@ const Contact = () => {
           </div>
 
           <div className="form-group">
+            <label htmlFor="contact-email">Your Email Address</label>
             <input
+              id="contact-email"
               type="email"
               name="your_email"
               placeholder="Your Email Address"
@@ -65,7 +71,9 @@ const Contact = () => {
           </div>
 
           <div className="form-group">
+            <label htmlFor="contact-message">Your Message</label>
             <textarea
+              id="contact-message"
               name="message"
               rows="5"
               placeholder="Write Your Message Here..."
@@ -78,13 +86,18 @@ const Contact = () => {
             className="btn-primary justify-center w-full py-4 text-base"
             disabled={loading}
           >
-            <FaPaperPlane className="text-sm" />
+            <FaPaperPlane className="text-sm" aria-hidden="true" />
             {loading ? "Sending Message..." : "Send Message"}
           </button>
 
           {send && (
-            <p className="msg-success">
+            <p className="msg-success" role="status">
               ✅ Thank you! Your message has been sent successfully.
+            </p>
+          )}
+          {sendError && (
+            <p className="msg-error" role="alert">
+              {sendError}
             </p>
           )}
 

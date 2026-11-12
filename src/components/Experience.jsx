@@ -1,4 +1,3 @@
-import React from "react";
 import { FaBriefcase, FaBuilding, FaCalendarAlt } from "react-icons/fa";
 
 const experiences = [

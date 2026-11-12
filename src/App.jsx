@@ -21,7 +21,7 @@ function App() {
   }, []);
 
   return (
-    <div className="bg-[#050814] min-h-screen text-slate-100">
+    <div className="app-shell">
       <Routes>
         <Route
           path="/"
