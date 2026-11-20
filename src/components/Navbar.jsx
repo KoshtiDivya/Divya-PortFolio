@@ -1,10 +1,11 @@
 import { useState } from "react";
-import my_logo from "../assets/D_logo.png";
+import my_logo from "../assets/D_logo_opt.png";
 import { Link } from "react-scroll";
 import { FiMenu, FiX } from "react-icons/fi";
 
 const navItems = [
   { label: "Home", target: "intro" },
+  { label: "About", target: "about-section" },
   { label: "Skills", target: "skills-section" },
   { label: "Experience", target: "experience-section" },
   { label: "Projects", target: "project-section" },
@@ -34,8 +35,14 @@ const Navbar = () => {
   return (
     <nav className="navbar" aria-label="Main navigation">
       <div className="navbar-inner">
-        <a className="brand" href="#intro" aria-label="Divya Koshti, home">
-          <img src={my_logo} alt="" className="logo" />
+        <a className="brand" href="#intro" aria-label="Divya Koshti, React Developer Portfolio Home">
+          <img
+            src={my_logo}
+            alt="Divya Koshti Logo"
+            className="logo"
+            width="48"
+            height="42"
+          />
         </a>
 
         <div className="desktop-nav">{renderNavItems()}</div>

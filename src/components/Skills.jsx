@@ -11,26 +11,26 @@ import express from "../images/express.png";
 import mongodb from "../images/mongodb.png";
 
 const skills = [
-  { name: "React.js", img: react },
-  { name: "JavaScript", img: javascript },
-  { name: "Node.js", img: node },
-  { name: "Express.js", img: express },
-  { name: "MongoDB", img: mongodb },
-  { name: "Tailwind CSS", img: tailwind },
-  { name: "Bootstrap", img: bootstrap },
-  { name: "HTML5", img: html },
-  { name: "CSS3", img: css },
-  { name: "Java", img: java },
-  { name: "C Language", img: c },
+  { name: "React.js", img: react, alt: "React.js - Component-Based Frontend UI Library" },
+  { name: "JavaScript", img: javascript, alt: "JavaScript ES6+ - Modern Web Programming Language" },
+  { name: "Node.js", img: node, alt: "Node.js - Server-Side JavaScript Runtime" },
+  { name: "Express.js", img: express, alt: "Express.js - Node.js Backend Framework" },
+  { name: "MongoDB", img: mongodb, alt: "MongoDB - NoSQL Database for Modern Web Applications" },
+  { name: "Tailwind CSS", img: tailwind, alt: "Tailwind CSS - Modern Utility-First CSS Framework" },
+  { name: "Bootstrap", img: bootstrap, alt: "Bootstrap - Responsive Frontend Component Framework" },
+  { name: "HTML5", img: html, alt: "HTML5 - Semantic Web Structure and Standards" },
+  { name: "CSS3", img: css, alt: "CSS3 - Modern Responsive Layouts and Animations" },
+  { name: "Java", img: java, alt: "Java - Object-Oriented Programming and Backend Basics" },
+  { name: "C Language", img: c, alt: "C Language - Fundamental Programming & Data Structures" },
 ];
 
 const Skills = () => {
   return (
-    <section id="skills-section" className="skills-section">
+    <section id="skills-section" className="skills-section" aria-labelledby="skills-heading">
       <div className="heading-container" data-aos="fade-up">
-        <h2 className="heading">Technical Skills</h2>
+        <h2 id="skills-heading" className="heading">Technical Skills</h2>
         <p className="subheading">
-          Frontend & MERN Stack Technologies I Work With
+          Core Technologies: React.js, JavaScript, MERN Stack &amp; Modern Frontend Engineering
         </p>
       </div>
 
@@ -43,7 +43,14 @@ const Skills = () => {
             data-aos-duration="600"
             data-aos-delay={index * 50}
           >
-            <img src={skill.img} alt={skill.name} />
+            <img
+              src={skill.img}
+              alt={skill.alt}
+              width="48"
+              height="48"
+              loading="lazy"
+              decoding="async"
+            />
             <p>{skill.name}</p>
           </div>
         ))}
