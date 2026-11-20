@@ -74,7 +74,7 @@ function prerender() {
 
     const pageTitle = `${proj.title} | Divya Koshti - React Developer Portfolio`;
     const pageDesc = `${proj.desc} Developed by Divya Koshti using ${proj.tech.slice(0, 4).join(", ")}.`;
-    const canonicalUrl = `https://divyakoshti.netlify.app/project/${proj.id}`;
+    const canonicalUrl = `https://divya-koshti.netlify.app/project/${proj.id}`;
 
     let html = baseHtml;
 

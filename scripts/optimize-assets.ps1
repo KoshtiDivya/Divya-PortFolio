@@ -54,7 +54,7 @@ $ogG.DrawString("Divya Koshti", $titleFont, $whiteBrush, 80, 150)
 $ogG.DrawString("React & Frontend Developer in Ahmedabad", $subFont, $cyanBrush, 80, 240)
 $ogG.DrawString("MERN Stack | JavaScript | Tailwind CSS | REST APIs", $bodyFont, $grayBrush, 80, 310)
 $ogG.DrawString("Explore projects, technical skills & experience", $bodyFont, $whiteBrush, 80, 420)
-$ogG.DrawString("divyakoshti.netlify.app", $bodyFont, $cyanBrush, 80, 480)
+$ogG.DrawString("divya-koshti.netlify.app", $bodyFont, $cyanBrush, 80, 480)
 
 $ogBmp.Save("public\og-image.jpg", [System.Drawing.Imaging.ImageFormat]::Jpeg)
 
