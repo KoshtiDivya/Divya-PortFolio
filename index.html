@@ -2,14 +2,172 @@
 <html lang="en" class="dark">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="/src/assets/D_logo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Divya Koshti - Portfolio" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Divya's Portfolio</title>
+    
+    <!-- Primary SEO Metadata -->
+    <title>Divya Koshti | React Developer &amp; Frontend Developer in Ahmedabad</title>
+    <meta name="description" content="Portfolio of Divya Koshti, React Developer and Frontend Developer based in Ahmedabad, Gujarat. Specializing in React.js, JavaScript, Tailwind CSS, and MERN stack web applications." />
+    <meta name="keywords" content="Divya Koshti, React Developer, Frontend Developer, React Developer in Ahmedabad, JavaScript Developer, React.js Developer Portfolio, MERN Stack Developer, Web Developer Ahmedabad, Frontend Engineer" />
+    <meta name="author" content="Divya Koshti" />
+    <meta name="creator" content="Divya Koshti" />
+    <meta name="publisher" content="Divya Koshti" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://divyakoshti.netlify.app/" />
+
+    <!-- Favicon & Touch Icons -->
+    <link rel="icon" type="image/png" sizes="64x64" href="/favicon.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <meta name="theme-color" content="#080d1b" />
+    <meta name="color-scheme" content="dark" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Divya Koshti | React Developer &amp; Frontend Developer in Ahmedabad" />
+    <meta property="og:description" content="Explore the React.js developer portfolio of Divya Koshti. Featuring real-world React, JavaScript, and MERN stack projects with responsive design." />
+    <meta property="og:url" content="https://divyakoshti.netlify.app/" />
+    <meta property="og:site_name" content="Divya Koshti Portfolio" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:image" content="https://divyakoshti.netlify.app/og-image.jpg" />
+    <meta property="og:image:secure_url" content="https://divyakoshti.netlify.app/og-image.jpg" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Divya Koshti - React Developer Portfolio" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Divya Koshti | React Developer &amp; Frontend Developer in Ahmedabad" />
+    <meta name="twitter:description" content="Portfolio of Divya Koshti, React &amp; Frontend Developer in Ahmedabad. View modern web applications, skills, and experience." />
+    <meta name="twitter:image" content="https://divyakoshti.netlify.app/og-image.jpg" />
+    <meta name="twitter:image:alt" content="Divya Koshti - React Developer Portfolio" />
+
+    <!-- Performance: Google Fonts Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" />
+
+    <!-- JSON-LD Structured Data: Person & WebSite -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Person",
+          "@id": "https://divyakoshti.netlify.app/#person",
+          "name": "Divya Koshti",
+          "jobTitle": "React Frontend Developer",
+          "description": "React Developer and Frontend Engineer based in Ahmedabad, Gujarat, India, specializing in React.js, JavaScript, Tailwind CSS, and MERN stack web applications.",
+          "url": "https://divyakoshti.netlify.app/",
+          "image": "https://divyakoshti.netlify.app/divya-profile.jpg",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Ahmedabad",
+            "addressRegion": "Gujarat",
+            "addressCountry": "India"
+          },
+          "knowsAbout": [
+            "React.js",
+            "JavaScript",
+            "HTML",
+            "CSS",
+            "Tailwind CSS",
+            "REST APIs",
+            "Node.js",
+            "MongoDB",
+            "Frontend Development",
+            "Responsive Web Design"
+          ],
+          "sameAs": [
+            "https://github.com/KoshtiDivya",
+            "https://www.linkedin.com/in/divya-koshti",
+            "https://www.facebook.com/share/15g9kdHsy2/",
+            "https://www.instagram.com/divya.koshti.982/#"
+          ],
+          "worksFor": {
+            "@type": "Organization",
+            "name": "Web Mind Technology Private Limited"
+          }
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://divyakoshti.netlify.app/#website",
+          "url": "https://divyakoshti.netlify.app/",
+          "name": "Divya Koshti Portfolio",
+          "description": "Personal portfolio website of Divya Koshti, React Developer and Frontend Developer in Ahmedabad",
+          "publisher": {
+            "@id": "https://divyakoshti.netlify.app/#person"
+          },
+          "inLanguage": "en"
+        }
+      ]
+    }
+    </script>
   </head>
   <body class="bg-[#050814] text-white">
-    <div id="root"></div>
+    <div id="root">
+      <!-- Semantic crawlable fallback for search engine crawlers prior to JS hydration -->
+      <header>
+        <nav aria-label="Main navigation">
+          <a href="/">Divya Koshti - Portfolio</a>
+          <ul>
+            <li><a href="#intro">Home</a></li>
+            <li><a href="#about-section">About</a></li>
+            <li><a href="#skills-section">Skills</a></li>
+            <li><a href="#experience-section">Experience</a></li>
+            <li><a href="#project-section">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+      <main>
+        <section id="intro">
+          <h1>Divya Koshti - React Developer &amp; Frontend Developer in Ahmedabad</h1>
+          <p>
+            I create modern, responsive web experiences with React, Node.js, and
+            MongoDB—turning thoughtful ideas into useful, polished products.
+          </p>
+        </section>
+        <section id="about-section">
+          <h2>About Divya Koshti</h2>
+          <p>
+            React Developer and Frontend Engineer based in Ahmedabad, Gujarat, India.
+            Focused on building high-performance, accessible, and user-centric web applications.
+          </p>
+        </section>
+        <section id="skills-section">
+          <h2>Technical Skills</h2>
+          <p>React.js, JavaScript, Node.js, Express.js, MongoDB, Tailwind CSS, Bootstrap, HTML5, CSS3, REST APIs</p>
+        </section>
+        <section id="experience-section">
+          <h2>Professional Experience</h2>
+          <article>
+            <h3>Frontend Developer - Web Mind Technology Private Limited</h3>
+            <p>Developing dynamic, responsive web interfaces using React.js, JavaScript (ES6+), and modern CSS frameworks.</p>
+          </article>
+        </section>
+        <section id="project-section">
+          <h2>Featured React &amp; Full-Stack Projects</h2>
+          <ul>
+            <li><a href="/project/1">SweetTalk - Realtime Chat App (React, Node.js, Express.js, MongoDB)</a></li>
+            <li><a href="/project/2">Doclix - Doctor Appointment Application (React, Node.js, Express.js, MongoDB)</a></li>
+            <li><a href="/project/3">Expense Tracker (JavaScript, Local Storage, JsPDF)</a></li>
+            <li><a href="/project/4">Currency Converter (JavaScript, Exchange Rate API)</a></li>
+            <li><a href="/project/5">Recipe App (React, Bootstrap, API Integration)</a></li>
+            <li><a href="/project/6">JioCinema Clone (React, API Integration)</a></li>
+            <li><a href="/project/7">Tic Tac Toe Game (JavaScript DOM)</a></li>
+            <li><a href="/project/8">Stone Paper Scissors Game (JavaScript)</a></li>
+          </ul>
+        </section>
+        <section id="contact">
+          <h2>Contact Divya Koshti</h2>
+          <p>Location: Ahmedabad, Gujarat, India</p>
+          <p>Connect on LinkedIn, GitHub, or send a message through the contact form.</p>
+        </section>
+      </main>
+    </div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>

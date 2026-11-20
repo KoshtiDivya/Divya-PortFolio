@@ -4,9 +4,11 @@ import { FaArrowRight, FaDownload } from "react-icons/fa";
 import { Link } from "react-scroll";
 
 const role = [
-  "Frontend Developer",
-  "Full Stack (MERN) Developer",
   "React Developer",
+  "Frontend Developer",
+  "MERN Stack Developer",
+  "JavaScript Developer",
+  "React Developer in Ahmedabad",
 ];
 
 const Home = () => {
@@ -35,7 +37,7 @@ const Home = () => {
   }, [text, isDeleting, index]);
 
   return (
-    <section id="intro">
+    <section id="intro" aria-labelledby="hero-title">
       <div
         className="introContent"
         data-aos="fade-right"
@@ -46,19 +48,25 @@ const Home = () => {
           Open to opportunities
         </span>
         <p className="hello">Hello, I’m</p>
-        <h1 className="introName">
+        <h1 id="hero-title" className="introName">
           Divya Koshti<span className="intro-period">.</span>
         </h1>
-        <div className="role-container">
+        <div className="role-container" aria-label={`Role: ${text}`}>
           <span className="role">{text}</span>
           <span className="cursor-blink">|</span>
         </div>
         <p className="introPara">
-          I create modern, responsive web experiences with React, Node.js, and
-          MongoDB—turning thoughtful ideas into useful, polished products.
+          I am a passionate <strong>React Developer</strong> and <strong>Frontend Developer based in Ahmedabad, Gujarat</strong>. 
+          I specialize in building modern, responsive, and performance-driven web applications using 
+          <strong> React.js</strong>, <strong>JavaScript</strong>, <strong>Tailwind CSS</strong>, <strong>Node.js</strong>, and <strong>MongoDB</strong>—turning thoughtful ideas into polished, user-centric products.
         </p>
         <div className="hero-actions">
-          <a href="/Divya_Koshti_Resume.pdf" download className="btn-primary">
+          <a
+            href="/Divya_Koshti_Resume.pdf"
+            download="Divya_Koshti_Resume.pdf"
+            className="btn-primary"
+            aria-label="Download Divya Koshti's Resume (PDF)"
+          >
             <FaDownload aria-hidden="true" />
             Download Resume
           </a>
@@ -82,7 +90,10 @@ const Home = () => {
         <div className="profile-img">
           <img
             src={profile}
-            alt="Divya Koshti Profile"
+            alt="Divya Koshti - React Developer and Frontend Developer in Ahmedabad"
+            width="360"
+            height="360"
+            fetchPriority="high"
             decoding="async"
           />
         </div>

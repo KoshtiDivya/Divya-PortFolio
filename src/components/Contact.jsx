@@ -38,11 +38,11 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="contact-section">
+    <section id="contact" className="contact-section" aria-labelledby="contact-heading">
       <div className="heading-container" data-aos="fade-up">
-        <h2 className="heading">Get In Touch</h2>
+        <h2 id="contact-heading" className="heading">Get In Touch</h2>
         <p className="subheading">
-          Have a project in mind or want to explore work opportunities? Feel free to reach out!
+          Looking for a skilled React Developer or Frontend Developer in Ahmedabad? Feel free to reach out for work opportunities, collaboration, or inquiries!
         </p>
       </div>
 
@@ -101,42 +101,74 @@ const Contact = () => {
             </p>
           )}
 
-          <div className="social-links">
+          <div className="social-links" aria-label="Social media profiles">
             <a
               href="https://github.com/KoshtiDivya"
               target="_blank"
               rel="noopener noreferrer"
               className="social-icon-btn"
-              title="GitHub"
+              title="Divya Koshti on GitHub"
+              aria-label="Divya Koshti on GitHub"
             >
-              <img src={github} alt="GitHub" />
+              <img
+                src={github}
+                alt="Divya Koshti on GitHub"
+                width="24"
+                height="24"
+                loading="lazy"
+                decoding="async"
+              />
             </a>
             <a
               href="https://www.linkedin.com/in/divya-koshti"
               target="_blank"
               rel="noopener noreferrer"
               className="social-icon-btn"
-              title="LinkedIn"
+              title="Divya Koshti on LinkedIn"
+              aria-label="Divya Koshti on LinkedIn"
             >
-              <img src={linkdin} alt="LinkedIn" />
+              <img
+                src={linkdin}
+                alt="Divya Koshti on LinkedIn"
+                width="24"
+                height="24"
+                loading="lazy"
+                decoding="async"
+              />
             </a>
             <a
               href="https://www.facebook.com/share/15g9kdHsy2/"
               target="_blank"
               rel="noopener noreferrer"
               className="social-icon-btn"
-              title="Facebook"
+              title="Divya Koshti on Facebook"
+              aria-label="Divya Koshti on Facebook"
             >
-              <img src={facebook} alt="Facebook" />
+              <img
+                src={facebook}
+                alt="Divya Koshti on Facebook"
+                width="24"
+                height="24"
+                loading="lazy"
+                decoding="async"
+              />
             </a>
             <a
               href="https://www.instagram.com/divya.koshti.982/#"
               target="_blank"
               rel="noopener noreferrer"
               className="social-icon-btn"
-              title="Instagram"
+              title="Divya Koshti on Instagram"
+              aria-label="Divya Koshti on Instagram"
             >
-              <img src={instagram} alt="Instagram" />
+              <img
+                src={instagram}
+                alt="Divya Koshti on Instagram"
+                width="24"
+                height="24"
+                loading="lazy"
+                decoding="async"
+              />
             </a>
           </div>
         </form>
