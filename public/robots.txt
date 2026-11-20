@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://divyakoshti.netlify.app/sitemap.xml
+Sitemap: https://divya-koshti.netlify.app/sitemap.xml

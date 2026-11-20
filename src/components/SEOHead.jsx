@@ -4,7 +4,7 @@ const SEOHead = ({
   title,
   description,
   canonicalUrl,
-  ogImage = "https://divyakoshti.netlify.app/og-image.jpg",
+  ogImage = "https://divya-koshti.netlify.app/og-image.jpg",
   ogType = "website",
   jsonLd,
 }) => {

@@ -15,7 +15,7 @@ const ProjectDetails = () => {
         <SEOHead
           title="Project Not Found | Divya Koshti"
           description="The requested portfolio project could not be found."
-          canonicalUrl="https://divyakoshti.netlify.app/"
+          canonicalUrl="https://divya-koshti.netlify.app/"
         />
         <h2 style={{ padding: "40px", textAlign: "center", color: "var(--accent-cyan)" }}>
           Project not found
@@ -44,7 +44,7 @@ const ProjectDetails = () => {
     "author": {
       "@type": "Person",
       "name": "Divya Koshti",
-      "url": "https://divyakoshti.netlify.app/"
+      "url": "https://divya-koshti.netlify.app/"
     }
   };
 
@@ -53,7 +53,7 @@ const ProjectDetails = () => {
       <SEOHead
         title={`${project.title} | Divya Koshti - React Developer Portfolio`}
         description={`${primaryDesc} Built by Divya Koshti using ${project.tech.slice(0, 4).join(", ")}.`}
-        canonicalUrl={`https://divyakoshti.netlify.app/project/${project.id}`}
+        canonicalUrl={`https://divya-koshti.netlify.app/project/${project.id}`}
         jsonLd={projectJsonLd}
       />
 
