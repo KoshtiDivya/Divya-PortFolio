@@ -55,11 +55,11 @@ const Home = () => {
           <span className="role">{text}</span>
           <span className="cursor-blink">|</span>
         </div>
-        <p className="introPara">
-          I am a passionate <strong>React Developer</strong> and <strong>Frontend Developer based in Ahmedabad, Gujarat</strong>. 
-          I specialize in building modern, responsive, and performance-driven web applications using 
+        <h1 className="introPara">
+          I am a passionate <strong>React Developer</strong> and <strong>Frontend Developer based in Ahmedabad, Gujarat</strong>.
+          I specialize in building modern, responsive, and performance-driven web applications using
           <strong> React.js</strong>, <strong>JavaScript</strong>, <strong>Tailwind CSS</strong>, <strong>Node.js</strong>, and <strong>MongoDB</strong>—turning thoughtful ideas into polished, user-centric products.
-        </p>
+        </h1>
         <div className="hero-actions">
           <a
             href="/Divya_Koshti_Resume.pdf"

@@ -1,4 +1,4 @@
-import { FaMapMarkerAlt, FaCode, FaLaptopCode, FaCheckCircle } from "react-icons/fa";
+import { FaMapMarkerAlt, FaCode, FaLaptopCode } from "react-icons/fa";
 
 const highlights = [
   {
