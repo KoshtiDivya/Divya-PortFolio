@@ -30,8 +30,8 @@ function App() {
           element={
             <>
               <SEOHead
-                title="Divya Koshti | React Developer & Frontend Developer in Ahmedabad"
-                description="Portfolio of Divya Koshti, React Developer and Frontend Developer based in Ahmedabad, Gujarat. Specializing in React.js, JavaScript, Tailwind CSS, and MERN stack web applications."
+                title="Divya Koshti | React and Frontend Developer in Ahmedabad"
+                description="Portfolio of Divya Koshti, React and Frontend Developer in Ahmedabad. Specializing in React.js, JavaScript, Tailwind CSS, and MERN stack web apps."
                 canonicalUrl="https://divya-koshti.netlify.app/"
               />
               <Navbar />
